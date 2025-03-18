@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html, body {
-  height: 100%;
+  height: 800px;
 }
 
 body {
@@ -10,6 +10,7 @@ body {
   background: #aaa;
   color: #333;
   /* I'll give you this one for free lol */
+  /* Zentriert die Ansicht in der Mitte des Viewports */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,19 +18,38 @@ body {
 
 .modal {
   background: white;
-  width: 480px;
+  width: 480px; /* vorher 480px */
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 16px;
   display: flex;
-  padding: 8px;
+}
+
+.elements {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-row,
+.text,
+.button-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-row {
+  justify-content: space-between;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 8px;
+}
+
+.button-row {
+  margin-top: 8px;
+  gap: 8px;
 }
 
 .icon {
@@ -40,11 +60,12 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 16px;
+  /* Zentriert Ausrufezeichen im Kreis */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  margin: 8px;
 }
 
 .close-button {
@@ -55,6 +76,8 @@ body {
   font-size: 16px;
   height: 24px;
   width: 24px;
+  flex-shrink: 0;
+  /* Zentriert x im Schließen-button */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +95,6 @@ button.continue {
   background: royalblue;
   border: 1px solid royalblue;
   color: white;
-  margin-top: 8px;
 }
 
 button.cancel {

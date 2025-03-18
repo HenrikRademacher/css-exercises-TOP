@@ -1,0 +1,28 @@
+.modal {
+    display: flex;
+    max-width: 432px;
+}
+
+.icon {
+    margin: 32px;
+}
+
+.elements {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-row {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.text {
+    display: flex;
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+}
